@@ -27,6 +27,9 @@
 		9A5E9F621F668D40004A36B8 /* MesajDetayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5E9F611F668D40004A36B8 /* MesajDetayViewController.swift */; };
 		9A6ADE651F6A5EBE00353AB3 /* TabilkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6ADE641F6A5EBD00353AB3 /* TabilkViewController.swift */; };
 		9A6ADE6D1F6A815600353AB3 /* TabikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6ADE6C1F6A815600353AB3 /* TabikiViewController.swift */; };
+		9A6ADE6F1F6AAB0000353AB3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6ADE6E1F6AAB0000353AB3 /* TableViewController.swift */; };
+		9A6ADE721F6AB2F500353AB3 /* BegeniTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6ADE711F6AB2F500353AB3 /* BegeniTableViewCell.swift */; };
+		9A7170401F6BB8E800F01990 /* FilmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A71703F1F6BB8E800F01990 /* FilmCollectionViewCell.swift */; };
 		9E0441A6A6BF0C38B01807F8 /* Pods_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9326C2C88CBF25E6AF81DDBD /* Pods_iosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +82,9 @@
 		9A5E9F611F668D40004A36B8 /* MesajDetayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MesajDetayViewController.swift; sourceTree = "<group>"; };
 		9A6ADE641F6A5EBD00353AB3 /* TabilkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabilkViewController.swift; sourceTree = "<group>"; };
 		9A6ADE6C1F6A815600353AB3 /* TabikiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabikiViewController.swift; sourceTree = "<group>"; };
+		9A6ADE6E1F6AAB0000353AB3 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9A6ADE711F6AB2F500353AB3 /* BegeniTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BegeniTableViewCell.swift; sourceTree = "<group>"; };
+		9A71703F1F6BB8E800F01990 /* FilmCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmCollectionViewCell.swift; sourceTree = "<group>"; };
 		CFAB0FD593D97C30C3A38EDE /* Pods-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosTests/Pods-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA5BE4AB6499B990B545623A /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD2E8765144547A98D7EC2F /* Pods-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosTests/Pods-iosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,17 +149,8 @@
 			children = (
 				9A46A8D11F618E61000FAF6D /* Main.storyboard */,
 				9A46A8D61F618E61000FAF6D /* LaunchScreen.storyboard */,
-				9A2D27BE1F62CC4300D89F13 /* Controller */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		9A2D27C01F62CC7400D89F13 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				9A46A8CC1F618E61000FAF6D /* ios */,
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 		9A2D27C11F62CCBE00D89F13 /* Model */ = {
@@ -169,7 +166,7 @@
 		9A46A8C11F618E61000FAF6D = {
 			isa = PBXGroup;
 			children = (
-				9A2D27C01F62CC7400D89F13 /* New Group */,
+				9A46A8CC1F618E61000FAF6D /* ios */,
 				9A46A8E11F618E61000FAF6D /* iosTests */,
 				9A46A8EC1F618E61000FAF6D /* iosUITests */,
 				9A46A8CB1F618E61000FAF6D /* Products */,
@@ -193,6 +190,7 @@
 			children = (
 				9A2D27C11F62CCBE00D89F13 /* Model */,
 				9A2D27BF1F62CC6900D89F13 /* Views */,
+				9A2D27BE1F62CC4300D89F13 /* Controller */,
 				9A46A8D41F618E61000FAF6D /* Assets.xcassets */,
 				9A46A8D91F618E61000FAF6D /* Info.plist */,
 				9A46A8FB1F618ED6000FAF6D /* ios-Bridging-Header.h */,
@@ -234,6 +232,9 @@
 				9A2D27B21F62827300D89F13 /* MenuViewController.swift */,
 				9A0432DF1F69694B00537405 /* GaleryViewController.swift */,
 				9A2D27B61F628BA500D89F13 /* MessageViewController.swift */,
+				9A6ADE6E1F6AAB0000353AB3 /* TableViewController.swift */,
+				9A71703F1F6BB8E800F01990 /* FilmCollectionViewCell.swift */,
+				9A6ADE711F6AB2F500353AB3 /* BegeniTableViewCell.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -573,9 +574,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A2D27B91F629D8300D89F13 /* LoginViewController.swift in Sources */,
+				9A6ADE6F1F6AAB0000353AB3 /* TableViewController.swift in Sources */,
 				9A2D27C31F62CCDC00D89F13 /* GirisViewController.swift in Sources */,
 				9A6ADE6D1F6A815600353AB3 /* TabikiViewController.swift in Sources */,
+				9A6ADE721F6AB2F500353AB3 /* BegeniTableViewCell.swift in Sources */,
 				9A46A9001F61907F000FAF6D /* ViewController.swift in Sources */,
+				9A7170401F6BB8E800F01990 /* FilmCollectionViewCell.swift in Sources */,
 				9A6ADE651F6A5EBE00353AB3 /* TabilkViewController.swift in Sources */,
 				9A46A8CE1F618E61000FAF6D /* AppDelegate.swift in Sources */,
 				9A46A8FE1F618ED7000FAF6D /* SWRevealViewController.m in Sources */,

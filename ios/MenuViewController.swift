@@ -20,8 +20,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet weak var imgProfil: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuNameArr = ["Home","Message","Map","Setting"]
-        iconeImage = [UIImage(named: "house")!,UIImage(named: "chat")!,UIImage(named: "placeholder")!,UIImage(named: "settings")!]
+        menuNameArr = ["Home","Message","Map","Table","Setting"]
+        iconeImage = [UIImage(named: "house")!,UIImage(named: "chat")!,UIImage(named: "placeholder")!,UIImage(named: "swift")!,UIImage(named: "settings")!]
         imgProfil.layer.cornerRadius=5
         isimLabel.text=adlabel
         bolumLabel.text=syerLabel
@@ -70,9 +70,15 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let newFrontViewController = UINavigationController.init(rootViewController:desController)
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
+        if cell.lblMenuName.text! == "Table"
+        {
+            let mainStroyBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desController = mainStroyBoard.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
+            let newFrontViewController = UINavigationController.init(rootViewController:desController)
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        }
         if cell.lblMenuName.text! == "Setting"
         {
-           
             let mainStroyBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let desController = mainStroyBoard.instantiateViewController(withIdentifier: "tabbar")
             self.present(desController, animated: true)
