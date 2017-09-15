@@ -14,8 +14,7 @@ class TableViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     var id=[String]()
     var konu=[String]()
     var resim=[String]()
-    var filmResim=[String]()
-    var filmAd=[String]()
+   
     
     
     @IBOutlet weak var collectionview: UICollectionView!
@@ -31,7 +30,7 @@ class TableViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         btnMenu.target = SWRevealViewController()
         btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
         jsonveri()
-        jsonFilm()
+        
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
     }
 
@@ -112,52 +111,7 @@ class TableViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         })
         task.resume()
     }
-    func jsonFilm()
-    {
-        let urlString="http://www.bucayapimarket.com/json.php"
-        let url = URL(string: urlString)
-        let task = URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
-            
-            if error != nil
-            {
-                print(error!)
-            }
-            else {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSArray
-                    if let jsonDic = json
-                    {
-                        for i in 0..<jsonDic.count
-                        {
-                            if let jsonVeri = jsonDic[i] as? NSDictionary
-                            {
-                                if let baslikArray = jsonVeri["baslik"] as? String
-                                {
-                                    self.filmAd.append(baslikArray)
-                                }
-                                if let resimArray = jsonVeri["resim"] as? String
-                                {
-                                    self.filmResim.append(resimArray)
-                                }
-                                
-                            }
-                            
-                        }
-                        
-                    }
-                    DispatchQueue.main.async {
-                        self.collectionview.reloadData()
-                    }
-                }
-                catch{
-                    print(error)
-                }
-            }
-            
-        })
-        task.resume()
-    }
-
+   
     
     
 
@@ -199,7 +153,7 @@ class TableViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return filmAd.count
+        return basliklar.count
     }
     
     
@@ -208,8 +162,8 @@ class TableViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mycell", for: indexPath) as! FilmCollectionViewCell
         
-        cell.FilmResim.sd_setImage(with:URL(string: filmResim[indexPath.row]))
-        cell.FilmAd.text=filmAd[indexPath.row]
+        cell.FilmResim.sd_setImage(with:URL(string: resim[indexPath.row]))
+        cell.FilmAd.text=basliklar[indexPath.row]
         indicatorFilm.stopAnimating()
         
         return cell
