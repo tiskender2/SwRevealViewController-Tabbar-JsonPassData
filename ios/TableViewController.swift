@@ -101,6 +101,7 @@ class TableViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                     }
                     DispatchQueue.main.async {
                         self.tblview.reloadData()
+                        self.collectionview.reloadData()
                     }
                 }
                 catch{
